@@ -1,0 +1,32 @@
+{
+  "name": "meridian-observability",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Meridian \u2014 composite SLO data observability console",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c blue,green \"node server/index.js\" \"vite\"",
+    "server": "node server/index.js",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "seed": "node server/seed-cli.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "concurrently": "^9.2.1",
+    "express": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.9.4",
+    "vite": "^8.3.8"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.13",
+    "happy-dom": "^21.0.4",
+    "playwright": "^1.65.1",
+    "supertest": "^7.3.2",
+    "vitest": "^5.1.1"
+  }
+}
